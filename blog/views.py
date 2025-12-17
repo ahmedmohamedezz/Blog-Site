@@ -5,6 +5,7 @@ from django.views.generic import ListView
 from django.views.decorators.http import require_POST
 from .models import Post
 from .forms import EmailPostForm, CommentForm
+from taggit.models import Tag
 
 
 def redirect_with_query_param(request, key, value):
@@ -19,37 +20,67 @@ def redirect_with_query_param(request, key, value):
     return redirect(url)
 
 
-class PostListView(ListView):
-    queryset = Post.published.all()
-    context_object_name = "posts"
-    paginate_by = 3
-    template_name = "blog/post/list.html"
+def post_list(request, tag_slug=None):
+    post_list = Post.published.all()
 
-    def get(self, request, *args, **kwargs):
-        """
-        Manually paginate exactly like the FBV did, so we can
-        catch invalid page numbers and redirect to a corrected URL.
-        """
-        post_list = self.get_queryset()
-        paginator = Paginator(post_list, self.paginate_by)
-        page_number = request.GET.get("page", 1)
+    tag = None
+    if tag_slug:
+        tag = get_object_or_404(Tag, slug=tag_slug)
+        post_list = post_list.filter(tags__in=[tag])
 
-        try:
-            posts_page = paginator.page(page_number)
-        except PageNotAnInteger:
-            return redirect_with_query_param(request, "page", 1)
-        except EmptyPage:
-            return redirect_with_query_param(request, "page", paginator.num_pages)
+    paginator = Paginator(post_list, per_page=3)
+    page_number = request.GET.get("page", 1)
 
-        context = {
-            "posts": posts_page,
-            "page_obj": posts_page,
-            "paginator": paginator,
-            "is_paginated": posts_page.has_other_pages(),
-            "object_list": posts_page.object_list,
-        }
+    try:
+        posts = paginator.page(page_number)
+    except PageNotAnInteger:
+        # if not an integer, get the first page
+        return redirect_with_query_param(request, "page", 1)
+    except EmptyPage:
+        # if page not found > num_pages, get the last one
+        return redirect_with_query_param(request, "page", paginator.num_pages)
 
-        return render(request, self.template_name, context)
+    return render(request, "blog/post/list.html", {"posts": posts, "tag": tag})
+
+
+# class PostListView(ListView):
+#     queryset = Post.published.all()
+#     context_object_name = "posts"
+#     paginate_by = 3
+#     template_name = "blog/post/list.html"
+
+#     def get(self, request, tag_slug=None, *args, **kwargs):
+#         """
+#         Manually paginate exactly like the FBV did, so we can
+#         catch invalid page numbers and redirect to a corrected URL.
+#         """
+#         tag = None
+#         post_list = self.get_queryset()
+
+#         if tag_slug:
+#             tag = get_object_or_404(Tag, slug=tag_slug)
+#             post_list = post_list.filter(tags__in=[tag])
+
+#         paginator = Paginator(post_list, self.paginate_by)
+#         page_number = request.GET.get("page", 1)
+
+#         try:
+#             posts_page = paginator.page(page_number)
+#         except PageNotAnInteger:
+#             return redirect_with_query_param(request, "page", 1)
+#         except EmptyPage:
+#             return redirect_with_query_param(request, "page", paginator.num_pages)
+
+#         context = {
+#             "posts": posts_page,
+#             "tag": tag,
+#             "page_obj": posts_page,
+#             "paginator": paginator,
+#             "is_paginated": posts_page.has_other_pages(),
+#             "object_list": posts_page.object_list,
+#         }
+
+#         return render(request, self.template_name, context)
 
 
 def post_detail(request, year, month, day, post):
