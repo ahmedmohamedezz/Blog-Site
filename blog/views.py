@@ -3,6 +3,7 @@ from django.core.mail import send_mail
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import ListView
 from django.views.decorators.http import require_POST
+from django.db.models import Count
 from .models import Post
 from .forms import EmailPostForm, CommentForm
 from taggit.models import Tag
@@ -92,14 +93,26 @@ def post_detail(request, year, month, day, post):
         publish__month=month,
         publish__day=day,
     )
-
     comments = post.comments.filter(active=True)
     form = CommentForm()
+
+    # similar posts - based on count(common tags)
+    post_tags_ids = post.tags.values_list("id", flat=True)
+    similar_posts = Post.published.filter(tags__in=post_tags_ids).exclude(pk=post.pk)
+
+    similar_posts = similar_posts.annotate(common_tags_cnt=Count("tags")).order_by(
+        "-common_tags_cnt", "-publish"
+    )[:4]
 
     return render(
         request,
         "blog/post/detail.html",
-        context={"post": post, "comments": comments, "form": form},
+        context={
+            "post": post,
+            "comments": comments,
+            "form": form,
+            "similar_posts": similar_posts,
+        },
     )
 
 
@@ -133,7 +146,13 @@ def post_share(request, post_id):
         form = EmailPostForm()
 
     return render(
-        request, "blog/post/share.html", {"post": post, "form": form, "sent": sent}
+        request,
+        "blog/post/share.html",
+        {
+            "post": post,
+            "form": form,
+            "sent": sent,
+        },
     )
 
 
