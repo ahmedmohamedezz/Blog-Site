@@ -1,0 +1,747 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-11-26T07:37:29.226Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Who was Django Reinhardt?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-11-26T07:47:24.764Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Who are you ?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-11-26T07:47:56.837Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "test",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-11-26T07:48:25.112Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Look at you free man",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-11-30T16:03:01.129Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Look at you free man",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-11-30T16:03:43.585Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "That Day you are waiting for",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-12-03T08:26:25.246Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "What are canonical links ?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-12-03T08:27:22.133Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "SEO friendly URLs",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-12-03T08:27:48.224Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Pagination helps",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-12-03T08:29:37.580Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Who was Django Reinhardt?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-12-12T08:16:12.333Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "comment by John Doe on Who are you ?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-12-12T08:16:44.037Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "comment by Computer Science on Who are you ?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-12-12T09:03:35.863Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "comment by John Doe on Who are you ?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Active\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-12-16T12:40:51.025Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Who are you ?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-12-16T12:41:05.323Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Look at you free man",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-12-16T12:41:27.446Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "That Day you are waiting for",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-12-16T12:41:37.864Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "SEO friendly URLs",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-12-16T12:41:48.522Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "What are canonical links ?",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-12-16T12:42:01.844Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Pagination helps",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-12-17T16:16:22.919Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "Markdown Format",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-12-17T16:17:41.236Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "Markdown Format",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-12-17T16:17:59.241Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "Markdown Format",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-12-17T16:20:10.891Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "comment by ahmed ezz on Markdown Format",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-12-22T14:16:54.020Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "localhost:8000",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Domain name\", \"Display name\"]}}]"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$wZU8hJKJpxxFqJ2xBRQK5B$NQVfrTIOLn7IlIu4yxaWxha+GWq2pnUOqRtvGBXBDHQ=",
+    "last_login": "2025-12-12T08:14:49.950Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "a@a.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-11-26T07:30:32.941Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "!8FzGFlXkTPm6exzvstQUfEHP4XLYCSRZxv1ZXa4X",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "test",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-26T07:47:56.832Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "mvex5ict8ju6a9lkpfuc0dl2vfrnaw9m",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyFAu0A9eu83kF1YpGpoUtqT8d9tkx40c5v3Zt4i4LaWsDVewpTEVWhx-e0I45PrAdID632Wca7rMpE8FHnSJsc58et2un8HBVvZ1ziAUS4qyt4CdR72mNxH6rR1GSAar0iDQ5fMEFkR9-zBZGeJlVMkPl_KEDd5:1vO9zT:UjHIWApkRqiDuxjJAupZ1guKJu97BcGjo2SbfpJeizo",
+    "expire_date": "2025-12-10T07:31:03.767Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "vog9ty39tjxnh8agcvv167731e3ag1tb",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQAP-FsyE8y9aj934DWditVA1NSnsy_rsh6UGvM5N5i4jHXuLReIsLiavQ4vLLEuYn1y7ogfW-yrzWfVuS7Ik8bZPTSvy6ne3foGArfavZmjlk6yExGD9DQgI2BiFYT6N1zinI2gwJgMbgUOek8qA8W-2IxecL09s3cg:1vTyIb:cYg8NrBKIq5oZ0GXpH_hDv2Tjj6Gj72Kw0V-qCbnHUg",
+    "expire_date": "2025-12-26T08:14:49.952Z"
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 1,
+  "fields": {
+    "domain": "localhost:8000",
+    "name": "localhost:8000"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 1,
+  "fields": {
+    "name": "jazz",
+    "slug": "jazz"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 2,
+  "fields": {
+    "name": "django",
+    "slug": "django"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 3,
+  "fields": {
+    "name": "music",
+    "slug": "music"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 4,
+  "fields": {
+    "name": "philosofy",
+    "slug": "philosofy"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 5,
+  "fields": {
+    "name": "freedom",
+    "slug": "freedom"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 6,
+  "fields": {
+    "name": "science",
+    "slug": "science"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 7,
+  "fields": {
+    "name": "technology",
+    "slug": "technology"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 8,
+  "fields": {
+    "name": "urls",
+    "slug": "urls"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 9,
+  "fields": {
+    "name": "databases",
+    "slug": "databases"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 10,
+  "fields": {
+    "name": "optimization",
+    "slug": "optimization"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 11,
+  "fields": {
+    "name": "markdown",
+    "slug": "markdown"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 12,
+  "fields": {
+    "name": "fonts",
+    "slug": "fonts"
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 1,
+  "fields": {
+    "tag": 1,
+    "content_type": 7,
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 3,
+  "fields": {
+    "tag": 3,
+    "content_type": 7,
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 4,
+  "fields": {
+    "tag": 4,
+    "content_type": 7,
+    "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 5,
+  "fields": {
+    "tag": 4,
+    "content_type": 7,
+    "object_id": 3
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 6,
+  "fields": {
+    "tag": 5,
+    "content_type": 7,
+    "object_id": 3
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 7,
+  "fields": {
+    "tag": 6,
+    "content_type": 7,
+    "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 8,
+  "fields": {
+    "tag": 7,
+    "content_type": 7,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 9,
+  "fields": {
+    "tag": 8,
+    "content_type": 7,
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 10,
+  "fields": {
+    "tag": 7,
+    "content_type": 7,
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 11,
+  "fields": {
+    "tag": 9,
+    "content_type": 7,
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 12,
+  "fields": {
+    "tag": 10,
+    "content_type": 7,
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 13,
+  "fields": {
+    "tag": 7,
+    "content_type": 7,
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 14,
+  "fields": {
+    "tag": 11,
+    "content_type": 7,
+    "object_id": 8
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 15,
+  "fields": {
+    "tag": 12,
+    "content_type": 7,
+    "object_id": 8
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 1,
+  "fields": {
+    "title": "Who was Django Reinhardt?",
+    "slug": "who-was-django-reinhardt",
+    "author": 1,
+    "body": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum.",
+    "publish": "2025-11-26T07:37:11Z",
+    "created": "2025-11-26T07:37:29.225Z",
+    "updated": "2025-12-03T08:29:37.579Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 2,
+  "fields": {
+    "title": "Who are you ?",
+    "slug": "who-are-you",
+    "author": 1,
+    "body": "who are you lorem ipsum ?  who are you lorem ipsum ?  who are you lorem ipsum ?  who are you lorem ipsum.",
+    "publish": "2025-10-01T07:44:18Z",
+    "created": "2025-11-26T07:47:24.762Z",
+    "updated": "2025-12-16T12:40:51.018Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 3,
+  "fields": {
+    "title": "Look at you free man",
+    "slug": "look-at-you-free-man",
+    "author": 2,
+    "body": "Test man is the free man ! Test man is the free man ! Test man is the free man ! Test man is the free man.",
+    "publish": "2025-11-26T18:00:00Z",
+    "created": "2025-11-26T07:48:25.110Z",
+    "updated": "2025-12-16T12:41:05.315Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 4,
+  "fields": {
+    "title": "That Day you are waiting for",
+    "slug": "that-day-you-are-waiting-for",
+    "author": 2,
+    "body": "That Day you are waiting for. That Day you are waiting for. That Day you are waiting for. That Day you are waiting for. That Day you are waiting for. That Day you are waiting for. That Day you are waiting for. That Day you are waiting for.",
+    "publish": "2025-11-30T16:03:01Z",
+    "created": "2025-11-30T16:03:43.585Z",
+    "updated": "2025-12-16T12:41:27.438Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 5,
+  "fields": {
+    "title": "What are canonical links ?",
+    "slug": "what-are-canonical-links",
+    "author": 2,
+    "body": "A website might have different pages that display the same content. In our\r\napplication, the initial part of the content for each post is displayed both on\r\nthe post list page and the post detail page. A canonical URL is the preferred\r\nURL for a resource. You can think of it as the URL of the most\r\nrepresentative page for specific content. There might be different pages on\r\nyour site that display posts, but there is a single URL that you use as the\r\nmain URL for a post.",
+    "publish": "2025-12-03T08:22:49Z",
+    "created": "2025-12-03T08:26:25.245Z",
+    "updated": "2025-12-16T12:41:48.513Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 6,
+  "fields": {
+    "title": "SEO friendly URLs",
+    "slug": "seo-friendly-urls",
+    "author": 1,
+    "body": "The canonical URL for a blog post detail view currently looks like\r\n/blog/1/. We will change the URL pattern to create SEO-friendly URLs\r\nfor posts. We will be using both the publish date and slug values to build\r\nthe URLs for single posts. By combining dates, we will make a post detail\r\nURL to look like /blog/2024/1/1/who-was-django-reinhardt/. We will\r\nprovide search engines with friendly URLs to index, containing both the\r\ntitle and date of the post.",
+    "publish": "2025-12-03T06:00:00Z",
+    "created": "2025-12-03T08:27:22.133Z",
+    "updated": "2025-12-16T12:41:37.857Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 7,
+  "fields": {
+    "title": "Pagination helps",
+    "slug": "pagination-helps",
+    "author": 1,
+    "body": "When you start adding content to your blog, you can easily store tens or\r\nhundreds of posts in your database. Instead of displaying all the posts on a\r\nsingle page, you may want to split the list of posts across several pages and\r\ninclude navigation links to the different pages. This functionality is called\r\npagination, and you can find it in almost every web application that displays\r\nlong lists of items.",
+    "publish": "2025-12-03T08:27:22Z",
+    "created": "2025-12-03T08:27:48.223Z",
+    "updated": "2025-12-16T12:42:01.836Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 8,
+  "fields": {
+    "title": "Markdown Format",
+    "slug": "markdown-format",
+    "author": 2,
+    "body": "This is a post formatted with markdown\r\n--------------------------------------\r\n*This is emphasized* and **this is more emphasized**.\r\n\r\nHere is a list:\r\n\r\n* One\r\n* Two\r\n* Three\r\n\r\nAnd a [link to the Django website](https://www.djangoproject.com)",
+    "publish": "2025-12-17T16:15:30Z",
+    "created": "2025-12-17T16:16:22.911Z",
+    "updated": "2025-12-17T16:17:59.236Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 1,
+  "fields": {
+    "post": 2,
+    "name": "John Doe",
+    "email": "johndoe@gmail.com",
+    "body": "I'm John Doeeee, who are you ?",
+    "created": "2025-12-12T08:16:12.332Z",
+    "updated": "2025-12-12T09:03:35.862Z",
+    "active": false
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 2,
+  "fields": {
+    "post": 2,
+    "name": "Computer Science",
+    "email": "computerscience@gmail.com",
+    "body": "I'm the one the made many people suffer",
+    "created": "2025-12-12T08:16:44.036Z",
+    "updated": "2025-12-12T08:16:44.036Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 3,
+  "fields": {
+    "post": 8,
+    "name": "ahmed ezz",
+    "email": "a@a.com",
+    "body": "Reeeaaaally nice feature! shout out to the maintainers",
+    "created": "2025-12-17T16:19:48.287Z",
+    "updated": "2025-12-17T16:20:10.890Z",
+    "active": true
+  }
+}
+]

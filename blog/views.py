@@ -1,11 +1,11 @@
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.core.mail import send_mail
+from django.contrib.postgres.search import SearchVector
 from django.shortcuts import render, get_object_or_404, redirect
-from django.views.generic import ListView
 from django.views.decorators.http import require_POST
 from django.db.models import Count
 from .models import Post
-from .forms import EmailPostForm, CommentForm
+from .forms import EmailPostForm, CommentForm, SearchForm
 from taggit.models import Tag
 
 
@@ -44,46 +44,6 @@ def post_list(request, tag_slug=None):
     return render(request, "blog/post/list.html", {"posts": posts, "tag": tag})
 
 
-# class PostListView(ListView):
-#     queryset = Post.published.all()
-#     context_object_name = "posts"
-#     paginate_by = 3
-#     template_name = "blog/post/list.html"
-
-#     def get(self, request, tag_slug=None, *args, **kwargs):
-#         """
-#         Manually paginate exactly like the FBV did, so we can
-#         catch invalid page numbers and redirect to a corrected URL.
-#         """
-#         tag = None
-#         post_list = self.get_queryset()
-
-#         if tag_slug:
-#             tag = get_object_or_404(Tag, slug=tag_slug)
-#             post_list = post_list.filter(tags__in=[tag])
-
-#         paginator = Paginator(post_list, self.paginate_by)
-#         page_number = request.GET.get("page", 1)
-
-#         try:
-#             posts_page = paginator.page(page_number)
-#         except PageNotAnInteger:
-#             return redirect_with_query_param(request, "page", 1)
-#         except EmptyPage:
-#             return redirect_with_query_param(request, "page", paginator.num_pages)
-
-#         context = {
-#             "posts": posts_page,
-#             "tag": tag,
-#             "page_obj": posts_page,
-#             "paginator": paginator,
-#             "is_paginated": posts_page.has_other_pages(),
-#             "object_list": posts_page.object_list,
-#         }
-
-#         return render(request, self.template_name, context)
-
-
 def post_detail(request, year, month, day, post):
     post = get_object_or_404(
         Post,
@@ -93,7 +53,7 @@ def post_detail(request, year, month, day, post):
         publish__month=month,
         publish__day=day,
     )
-    comments = post.comments.filter(active=True)
+    comments = post.comments.filter(active=True)  # type: ignore
     form = CommentForm()
 
     # similar posts - based on count(common tags)
@@ -175,4 +135,24 @@ def post_comment(request, post_id):
         request,
         "blog/post/comment.html",
         {"post": post, "form": form, "comment": comment},
+    )
+
+
+def post_search(request):
+    form = SearchForm()
+    query = request.GET.get("query", None)
+    results = []
+
+    if query:
+        form = SearchForm(request.GET)
+        if form.is_valid():
+            query = form.cleaned_data["query"]
+            results = Post.published.annotate(
+                search=SearchVector("title", "body")
+            ).filter(search=query)
+
+    return render(
+        request,
+        "blog/post/search.html",
+        {"form": form, "query": query, "results": results},
     )
